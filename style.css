@@ -1,0 +1,389 @@
+/* CSS Reset & Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #bd1616;
+    --primary-dark: #8c0d0d;
+    --accent-color: #ffb800;
+    --bg-dark: #121212;
+    --bg-light: #1c1c1c;
+    --text-color: #ffffff;
+    --text-muted: #aaaaaa;
+    --font-family: 'Kanit', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-transform: none;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* Utilities */
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+    background-color: var(--accent-color);
+    color: #000000;
+}
+
+.btn-secondary:hover {
+    background-color: #e5a500;
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: var(--bg-dark);
+}
+
+.text-gold {
+    color: var(--accent-color);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.title-line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(18, 18, 18, 0.95);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.nav-container {
+    display: table;
+    width: 100%;
+}
+
+.logo {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.nav-btn {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding: 180px 0 120px 0;
+    background-color: #260505; /* Fallback background color simulating rich red-black theme */
+    text-align: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.badge {
+    background-color: rgba(189, 22, 22, 0.2);
+    border: 1px solid var(--primary-color);
+    color: #ffcdcd;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.hero-actions .btn {
+    margin: 0 10px;
+}
+
+/* Features */
+.features {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+
+.features-grid {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.feature-card {
+    display: table-cell;
+    padding: 30px;
+    text-align: center;
+    background-color: var(--bg-dark);
+    border-radius: 10px;
+    border: 1px solid #2a2a2a;
+}
+
+/* Simulating gap in table layout */
+.feature-card:not(:last-child) {
+    border-right: 15px solid var(--bg-light);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Menu Section */
+.menu-preview {
+    padding: 80px 0;
+}
+
+.menu-grid {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.menu-item {
+    display: table-cell;
+    background-color: var(--bg-light);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #2a2a2a;
+}
+
+.menu-item:not(:last-child) {
+    border-right: 20px solid var(--bg-dark);
+}
+
+.menu-img-placeholder {
+    height: 200px;
+    background-color: #333;
+    display: block;
+    text-align: center;
+    line-height: 200px;
+    font-size: 4rem;
+}
+
+.menu-info {
+    padding: 20px;
+}
+
+.menu-meta {
+    margin-bottom: 10px;
+}
+
+.menu-meta h3 {
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+.menu-meta .price {
+    float: right;
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.menu-info p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    height: 45px;
+    overflow: hidden;
+}
+
+.order-link {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.order-link:hover {
+    color: white;
+}
+
+/* Promotion Section */
+.promo {
+    padding: 60px 0 100px 0;
+}
+
+.promo-box {
+    display: table;
+    width: 100%;
+    background: linear-gradient(135deg, #bd1616 0%, #5e0b0b 100%);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.promo-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.promo-badge {
+    background-color: var(--accent-color);
+    color: black;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.promo-content h2 {
+    font-size: 2rem;
+    margin: 15px 0 10px;
+}
+
+.promo-note {
+    font-size: 0.85rem;
+    color: #ffcdcd;
+    margin-top: 10px;
+}
+
+.promo-action {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    width: 250px;
+}
+
+/* Footer */
+.footer {
+    background-color: #0f0f0f;
+    padding: 60px 0 20px;
+    border-top: 2px solid var(--primary-color);
+}
+
+.footer-grid {
+    display: table;
+    width: 100%;
+}
+
+.footer-info, .footer-hours, .footer-contact {
+    display: table-cell;
+    width: 33.33%;
+    padding: 0 20px;
+}
+
+.footer-info .logo {
+    margin-bottom: 15px;
+}
+
+.footer-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.footer p {
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    color: #555;
+    font-size: 0.9rem;
+}
