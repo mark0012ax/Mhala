@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าร้านค้า - รายการสินค้าทั้งหมด</title>
+    <link rel="stylesheet" href="shop-style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <span class="logo">🏪 ร้านค้าออนไลน์ของเรา</span>
+            <!-- ปุ่มลิงก์กลับไปหน้าจัดการสต็อก (จำลองว่าเป็นแอดมิน) -->
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- ส่วนค้นหาและกรองสินค้า -->
+        <div class="filter-section">
+            <input type="text" id="search-input" placeholder="🔍 ค้นหาสินค้าที่ต้องการ...">
+            <select id="status-filter">
+                <option value="all">แสดงสินค้าทั้งหมด</option>
+                <option value="in-stock">มีสินค้าพร้อมส่ง</option>
+                <option value="low-stock">สินค้าใกล้หมด</option>
+                <option value="out-of-stock">สินค้าหมดชั่วคราว</option>
+            </select>
+        </div>
+
+        <!-- โซนแสดงการ์ดสินค้า -->
+        <div id="product-grid" class="product-grid">
+            <!-- รายการสินค้าในสต็อกจะถูกสร้างด้วย JavaScript ตรงนี้ -->
+        </div>
+    </div>
+
+    <script src="shop-script.js"></script>
+</body>
+</html>

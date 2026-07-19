@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบบริหารจัดการสต็อกสินค้า</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📦 ระบบบริหารจัดการสต็อกสินค้า</h1>
+        
+        <!-- ส่วนหลังบ้าน (Backend Form): เพิ่ม/แก้ไข สินค้า -->
+        <div class="card backend-section">
+    <h2>⚙️ จัดการสินค้า (หลังบ้าน)</h2>
+    <form id="product-form">
+        <input type="hidden" id="product-index">
+        <div class="form-group">
+            <label for="product-name">ชื่อสินค้า:</label>
+            <input type="text" id="product-name" required placeholder="เช่น เสื้อยืดลายการ์ตูน">
+        </div>
+        <div class="form-group">
+            <label for="product-qty">จำนวนสินค้าในสต็อก:</label>
+            <input type="number" id="product-qty" required min="0" placeholder="เช่น 50">
+        </div>
+        <!-- 📸 เพิ่มช่องอัปโหลดรูปภาพตรงนี้ -->
+        <div class="form-group">
+            <label for="product-image">รูปภาพสินค้า:</label>
+            <input type="file" id="product-image" accept="image/*">
+            <div id="image-preview-container" style="margin-top: 10px; display: none;">
+                <img id="image-preview" src="" alt="ตัวอย่างรูปภาพ" style="max-width: 100px; max-height: 100px; border-radius: 5px;">
+            </div>
+        </div>
+        <button type="submit" id="submit-btn" class="btn btn-success">บันทึกสินค้า</button>
+        <button type="button" id="cancel-btn" class="btn btn-secondary" style="display: none;">ยกเลิกการแก้ไข</button>
+    </form>
+</div>
+
+        <!-- ส่วนหน้าบ้าน (Frontend Display): แสดงสถานะสินค้าให้ผู้ใช้เห็น -->
+        <div class="card frontend-section">
+            <h2>📊 รายการและสถานะสินค้า (หน้าบ้าน)</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ชื่อสินค้า</th>
+                            <th>จำนวนคงเหลือ</th>
+                            <th>สถานะสต็อก</th>
+                            <th>การจัดการ</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-table-body">
+                        <!-- รายการสินค้าจะถูกใส่เข้ามาด้วย JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
