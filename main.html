@@ -3,195 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>หน้าแรก - ร้านหม่าล่า</title>
-    <style>
-        :root {
-            --primary: #d32f2f;
-            --secondary: #ff9800;
-            --bg-color: #121212;
-            --card-bg: #1e1e1e;
-            --text: #ffffff;
-            --text-muted: #aaaaaa;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        /* เมนูนำทาง (Navbar) */
-        nav {
-            background-color: #000;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid var(--primary);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--secondary);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 15px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text);
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 5px;
-            transition: 0.3s;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            background-color: var(--primary);
-            color: #fff;
-        }
-
-        /* พื้นที่เนื้อหาหน้าแรก */
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
-                        url('https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1200&q=80') center/cover;
-            padding: 80px 20px;
-            text-align: center;
-            border-radius: 12px;
-            margin-bottom: 30px;
-        }
-
-        .hero h1 {
-            font-size: 2.8rem;
-            color: var(--secondary);
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: #ddd;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .about-card {
-            background-color: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-        }
-
-        .about-card h2 {
-            color: var(--secondary);
-            margin-bottom: 15px;
-            border-left: 4px solid var(--primary);
-            padding-left: 10px;
-        }
-
-        .about-card p {
-            color: var(--text-muted);
-            margin-bottom: 15px;
-        }
-
-        /* ปุ่มทางลัดไปยังหน้าอื่น */
-        .quick-links {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .btn-card {
-            flex: 1;
-            min-width: 250px;
-            background: var(--card-bg);
-            border: 1px solid #333;
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-            text-decoration: none;
-            color: var(--text);
-            transition: transform 0.2s, border-color 0.2s;
-        }
-
-        .btn-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        .btn-card h3 {
-            color: var(--secondary);
-            margin-bottom: 10px;
-        }
-
-        .btn-card p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-    </style>
+    <title>ร้านหมาล่าหม้อไฟ & เสียบไม้ - Mala Hotpot</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- Google Fonts for Thai Language -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- แถบเมนูนำทางไปยังหน้าต่างๆ -->
-    <nav>
-        <a href="" class="logo">เฮง เฮง หมาล่า</a>
-        <ul class="nav-links">
-            <li><a href="main.html" class="active">หน้าแรก</a></li>
-            <li><a href="shop.html">เช็กสินค้าคงเหลือ</a></li>
-            <li><a href="contact.html">ติดต่อเรา</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        
-        <!-- ส่วนต้อนรับ (Hero Section) -->
-        <header class="hero">
-            <h1>ยินดีต้อนรับสู่ร้านหม่าล่า</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </header>
-
-        <!-- รายละเอียดข้อมูลร้าน (Lorem) -->
-        <section class="about-card">
-            <h2>เกี่ยวกับร้านของเรา</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio.</p>
-        </section>
-
-        <!-- ปุ่มทางลัดเชื่อมต่อไปยังหน้าอื่นๆ -->
-        <section class="quick-links">
-            <a href="shop.html" class="btn-card">
-                <h3>📦 ดูสินค้าคงเหลือ</h3>
-                <p>เช็กสต็อกวัตถุดิบและรายการอาหารที่มีในวันนี้</p>
-            </a>
-
-            <a href="contact.html" class="btn-card">
-                <h3>📞 ติดต่อร้านค้า</h3>
-                <p>ดูเบอร์โทรศัพท์ แผนที่ร้าน และช่องทางโซเชียลมีเดีย</p>
-            </a>
-        </section>
-
+  <!-- Header / Navbar ใหม่ -->
+<header>
+    <div class="logo">🔥 เฮง เฮง <span>หมาล่า</span></div>
+    
+    <!-- ปุ่ม Hamburger สำหรับมือถือ -->
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
     </div>
 
+    <!-- รายการเมนูบาร์ -->
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="#home">หน้าแรก</a></li>
+            <li><a href="#about">เกี่ยวกับร้าน</a></li>
+            <li><a href="#menu">เมนูแนะนำ</a></li>
+            <li><a href="#gallery">บรรยากาศร้าน</a></li>
+            <li><a href="#contact">ติดต่อเรา</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>ลิ้มลองความเผ็ดชา... ระดับตำนาน</h1>
+            <p>หมาล่าสูตรต้นตำรับ พริกเผ็ดชาถึงใจ วัตถุดิบสดใหม่ทุกวัน</p>
+            <a href="#menu" class="btn">ดูเมนูเด็ด</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>เกี่ยวกับร้านของเรา</h2>
+            <p>ร้านหมาล่าของเราคัดสรรพริกหมาล่าคุณภาพเยี่ยมส่งตรงจากมณฑลเสฉวน นำมารี่ยวกับสมุนไพรจีนกว่า 10 ชนิด จนได้น้ำซุปและพริกโรยรสชาติเข้มข้น หอม กลมกล่อม และเผ็ดชาสะใจ เหมาะสำหรับคนรักความซี้ดซ๊าดทุกคน!</p>
+        </div>
+    </section>
+
+    <!-- Menu Highlights Section -->
+    <section id="menu" class="menu">
+        <h2>เมนูแนะนำที่ไม่ควรพลาด</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <div class="menu-img-placeholder">🔥</div>
+                <h3>หมาล่าเสียบไม้</h3>
+                <p>เนื้อหมู เนื้อวัว ผักสดๆ ย่างเตาถ่านหอมๆ ปรับระดับความเผ็ดได้ตามใจชอบ</p>
+            </div>
+            <div class="menu-card">
+                <div class="menu-img-placeholder">🍲</div>
+                <h3>ซุปหมาล่าหม้อไฟ</h3>
+                <p>น้ำซุปหมาล่าเข้มข้น ซดร้อนๆ เข้มข้นถึงใจ สายชาต้มสุกี้ต้องลอง</p>
+            </div>
+            <div class="menu-card">
+                <div class="menu-img-placeholder">🥢</div>
+                <h3>ชุดเนื้อสไลด์พรีเมียม</h3>
+                <p>เนื้อวัวสายพันธุ์ดี สไลด์บางกำลังดี จุ่มซุปหมาล่าเพียง 10 วินาที ละลายในปาก</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Atmosphere -->
+    <section id="gallery" class="gallery">
+        <h2>บรรยากาศภายในร้าน</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">โซนโต๊ะอาหารสบายๆ</div>
+            <div class="gallery-item">บาร์ตักวัตถุดิบสดใหม่</div>
+            <div class="gallery-item">มุมถ่ายรูปสไตล์นีออน</div>
+            <div class="gallery-item">มุมถ่ายรูปสไตล์นีออน</div>
+            <div class="gallery-item">มุมถ่ายรูปสไตล์นีออน</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>ข้อมูลการเดินทาง & ติดต่อ</h2>
+        <div class="contact-info">
+            <p><strong>📍 ที่ตั้ง:</strong> 123 ถนนสายเผ็ดชา แขวงอร่อย เขตเมือง กรุงเทพฯ</p>
+            <p><strong>⏰ เวลาเปิด-ปิด:</strong> เปิดทุกวัน 16:00 - 23:00 น.</p>
+            <p><strong>📞 โทรศัพท์:</strong> 081-234-5678</p>
+            <p><strong>LINE:</strong> @malahotpot</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 ร้านหมาล่า Spicy. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
